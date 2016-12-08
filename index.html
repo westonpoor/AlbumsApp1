@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>My Album Collection</title>
+
+      <script src="assets/lib/jquery-3.1.1.min.js"></script>
+      <script src="assets/lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="assets/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <script src="assets/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+      <link rel="stylesheet" href="assets/js/album.css">
+      <script src="assets/js/album.min.js"></script>
+      <script src="assets/js/polyfill.js"></script>
+
+  </head>
+  <body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+    <h2>My Album Collecshun</h2>
+        <div id="errorArea"></div>
+        <p>An ever growing list of my favorite albums.</p>
+
+        <div class="container">
+          <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-8 first-row">
+                    <button type="button" class="btn btn-sm btn-default" onclick="loadAlbums()">Load Albums</button>
+                    <button type="button" class="btn btn-sm btn-default" onclick="saveAlbums()">Save Albums</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><p class="inputValue">Album Title:</p></div>
+                <div class="col-md-4"><input type="text" id="inputAlbumTitle" value="" class="form-control"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><p class="inputValue">Band:</p></div>
+                <div class="col-md-4"><input type="text" id="inputBand" value="" class="form-control"/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"><p class="inputValue">Release Year:</p></div>
+                <div class="col-md-4"><input type="text" id="inputReleaseYear" value="" class="form-control"/></div>
+            </div>
+            <button type="button" class="btn btn-lg btn-primary" onclick="addAlbum()">Add Album</button>
+          </div>
+          <div class="col-md-5">
+              <img src="assets/images/records.jpg" alt="records!" class="img-responsive img-thumbnail"/>
+          </div>
+        </div>
+    </div><!-- end of jumbotron -->
+
+      <div class="container col-md-8">
+      <table class="table table-striped table-hover table-bordered" id="albumTable">
+          <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Band</th>
+            <th>Release Year</th>
+            <th>Remove</th>
+          </tr>
+          </thead>
+          <tbody>
+          </tbody>
+      </table>
+      </div>
+  </div>
+
+  <div class="container footer">
+      <img class="img-responsive img-thumbnail" src="assets/images/unlLogo.jpg" alt="UNL Logo"/><p>Copyright,
+      <a href="http://cse.unl.edu/~cbourke/CSCE120" class="external">CSCE 120 &ndash; Learning To Code</a> 2015</p>
+  </div>
+
+  </body>
+</html>
